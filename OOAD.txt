@@ -203,3 +203,8 @@ later, or switch an object instantiation rule, you have to manually find and rew
 
 Seniors in project where it can be used: Setting up cross-database connection pools (e.g., dynamically spinning up MongoDB vs. 
 PostgreSQL clients), building global configuration handlers, or constructing complex multi-step forms.
+
+
+
+"For example, in my MERN stack experience, when we connect to MongoDB using Mongoose, Mongoose inherently uses a Creational approach under
+the hood to manage connection pools (maxPoolSize) so that we don't accidentally create new network connections for every single API request."
