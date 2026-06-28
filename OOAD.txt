@@ -493,3 +493,136 @@ English: CI/CD stands for Continuous Integration and Continuous Deployment. It a
 English: I would recommend the Agile Model. In Agile, requirements do not need to be fixed at the start. Since development happens in 
 short iterations, we can easily adopt and implement new changes in the upcoming sprints without destroying the existing system 
 architecture.
+
+
+
+
+
+3. Core Paradigms 
+
+
+❓ What are the main programming paradigms you know?
+English: The most common programming paradigms are:
+
+Imperative Programming: Telling the computer how to do something step-by-step (e.g., Procedural, Object-Oriented).
+
+Declarative Programming: Telling the computer what you want to achieve, without explicitly writing the step-by-step control flow 
+(e.g., Functional, SQL).
+
+
+
+❓ What is the difference between Object-Oriented Programming (OOP) and Functional Programming (FP)?
+English:
+
+OOP: Organizes code around Objects that contain both data (properties) and behavior (methods). It uses states and mutable data.
+
+FP: Organizes code around Pure Functions. It avoids changing states and uses immutable data (data that cannot be changed after creation).
+
+
+
+
+
+
+❓ What is a Pure Function and what are Side Effects?
+English: A Pure Function is a function that always returns the same output for the same input and has no side effects.
+ A Side Effect is when a function modifies something outside its own scope (like changing a global variable, writing to a database,
+  or modifying the DOM).
+
+  pure function 
+  =============
+  function square(x) {
+    return x * x;
+}
+
+console.log(square(2)); // 4
+console.log(square(2)); // 4
+
+
+
+impure foundation
+=================
+
+let count = 0;
+
+function increment() {
+    count++;
+    return count;
+}
+
+
+
+
+
+
+❓ What are Higher-Order Functions in JavaScript?
+
+English: A Higher-Order Function is a function that takes one or more functions as arguments, or returns a function as its result.
+ Examples in JS include .map(), .filter(), and .reduce().
+
+
+
+1. Takes a function as input
+function greet(name, formatter) {
+    return formatter(name);
+}
+
+function upperCase(name) {
+    return name.toUpperCase();
+}
+
+console.log(greet("amal", upperCase));
+Output:
+AMAL
+
+
+
+2. Returns a function
+function multiplyBy(x) {
+    return function(y) {
+        return x * y;
+    };
+}
+
+const double = multiplyBy(2);
+
+console.log(double(5));
+Output:
+10
+
+
+
+
+
+
+❓ JavaScript is a multi-paradigm language. What does that mean?
+English: It means JavaScript does not force developers to use only one coding style. You can write traditional procedural code,
+use class-based Object-Oriented programming (OOP), or write declarative Functional Programming (FP) depending on the project requirements.
+
+❓ Why is the Object-Oriented approach preferred over Procedural programming for large applications?
+English: Procedural programming treats a program as a sequence of top-down instructions, which becomes unmanageable as the codebase grows.
+ The Object-Oriented approach breaks the system down into independent, self-contained objects. This makes large codebases structured, 
+ easier to understand, debug, and scale.
+
+
+
+
+2. Key Advantages
+
+1. Reusability 
+English: Through Inheritance, we can inherit properties and methods of an existing class into a new class without rewriting the code.
+
+
+
+2. Maintainability & Modularity 
+English: Since code is divided into separate modules (Classes), debugging is highly efficient. If an error occurs in the payment logic,
+ we only need to fix the Payment class without touching the rest of the application
+
+
+3. Data Security 
+English: Using Encapsulation, we can hide sensitive data and restrict direct access through private properties and getters/setters, 
+preventing accidental modifications from outside code
+
+
+4. Flexibility through Polymorphism
+English: Polymorphism allows different classes to share the same method name but execute different logic, making the system highly 
+adaptable to future changes.
