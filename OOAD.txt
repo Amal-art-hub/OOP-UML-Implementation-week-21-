@@ -208,3 +208,288 @@ PostgreSQL clients), building global configuration handlers, or constructing com
 
 "For example, in my MERN stack experience, when we connect to MongoDB using Mongoose, Mongoose inherently uses a Creational approach under
 the hood to manage connection pools (maxPoolSize) so that we don't accidentally create new network connections for every single API request."
+
+
+
+//===============================================
+
+❓ What is the difference between Object-Oriented Analysis (OOA) and Object-Oriented Design (OOD)?
+
+Object-Oriented Analysis (OOA) focuses on understanding what the system needs to do.
+ It involves identifying the real-world objects, requirements, and business logic of the system.
+
+Object-Oriented Design (OOD) focuses on how the system will do it. It transforms the analysis models into technical blueprints, 
+defining classes, methods, data types, and specific object behaviors.
+
+
+❓ Explain the 4 pillars of OOP and their role in OOAD.
+
+ 1. Encapsulation: Binding data and methods together into a single unit (Class) and restricting direct access to safeguard the state.
+
+
+ class Encapsulation{
+    #balance;
+    constructor(name,balance){
+        this.name=name;
+        this.#balance=balance;
+    }
+
+
+    deposit(amount){
+        this.#balance +=amount;
+        console.log("deposited:",amount)
+    }
+
+    withdraw(amount){
+    if(amount<=this.#balance){
+        this.#balance -=amount;
+        console.log("withdrwn:",amount)
+    }else{
+        console.log("insuficiant balance");
+    }
+    }
+
+    getbalance(){
+        console.log("balance:",this.#.balance)
+    }
+ }
+
+
+
+
+const account = new BankAccount("Amal", 5000);
+
+account.deposit(1000);
+account.withdraw(2000);
+
+console.log("Balance:", account.getBalance());
+
+// ❌ Not allowed
+// console.log(account.#balance); // SyntaxError
+
+
+
+
+2. Abstraction: Hiding complex implementation details and showing only the essential features to the user.
+
+
+
+class Car {
+    start() {
+        this.#checkFuel();
+        this.#startEngine();
+        console.log("Car is ready to drive.");
+    }
+
+    #checkFuel() {
+        console.log("Checking fuel...");
+    }
+
+    #startEngine() {
+        console.log("Starting engine...");
+    }
+}
+
+const car = new Car();
+
+car.start();
+
+// ❌ Not allowed
+// car.#checkFuel(); // SyntaxError
+// car.#startEngine(); // SyntaxError
+
+
+
+Inheritance
+
+Inheritance is the process of creating a new class (child/subclass) from an existing class (parent/superclass) so 
+that the child class can reuse the properties and methods of the parent class.
+
+
+
+// Parent class
+class Animal {
+    constructor(name) {
+        this.name = name;
+    }
+
+    eat() {
+        console.log(`${this.name} is eating.`);
+    }
+}
+
+// Child class
+class Dog extends Animal {
+    bark() {
+        console.log(`${this.name} is barking.`);
+    }
+}
+
+const dog = new Dog("Buddy");
+
+dog.eat();   // Inherited method
+dog.bark();  // Child's own method
+
+
+
+
+
+Polymorphism
+
+
+Polymorphism means "one interface, many forms." The same method behaves differently depending on the object that calls it.
+
+// Parent class
+class Animal {
+    speak() {
+        console.log("Animal makes a sound.");
+    }
+}
+
+// Child class
+class Dog extends Animal {
+    speak() {
+        console.log("Dog barks.");
+    }
+}
+
+// Child class
+class Cat extends Animal {
+    speak() {
+        console.log("Cat meows.");
+    }
+}
+
+const animal = new Animal();
+const dog = new Dog();
+const cat = new Cat();
+
+animal.speak();
+dog.speak();
+cat.speak();
+
+//=============
+Object relationship
+
+Object Relationships define how different classes and objects connect, communicate, and interact with each other 
+in software design
+
+
+
+1. IS-A Relationship (Inheritance)
+What it means: One class is a specific type of another class.
+
+Example: A Car IS-A Vehicle.
+
+2. HAS-A Relationship (Association)
+What it means: One class contains or uses another class.
+
+The 3 Types:
+
+Association: A generic connection where both objects are completely independent (e.g., a Driver and a Car).
+
+Aggregation: A weak relationship where the child object can exist without the parent (e.g., a Department has Professors).
+
+Composition: A strong relationship where the child object cannot exist without the parent (e.g., a House has Rooms).
+
+
+
+
+3. Design Principles / ഡിസൈൻ തത്വങ്ങൾ (SOLID)
+❓ What are SOLID principles?
+English: SOLID represents five design principles for writing maintainable and scalable code:
+
+S (Single Responsibility): A class should have only one reason to change (only one job).
+
+O (Open/Closed): Software entities should be open for extension, but closed for modification.
+
+L (Liskov Substitution): Subclasses should be substitutable for their base classes without breaking the application.
+
+I (Interface Segregation): Clients should not be forced to depend on interfaces they do not use.  
+
+D (Dependency Inversion): High-level modules should not depend on low-level modules; both should depend on abstractions.
+
+
+
+
+
+
+
+
+
+Software Development Life Cycle (SDLC)
+Software Development Life Cycle (SDLC) is a structured process or step-by-step methodology used by software development teams to design,
+ develop, test, and deploy high-quality software.
+
+Its main goal is to deliver software that meets client expectations, is completed within estimated timelines, 
+and stays within budget
+
+
+
+❓ What are the main phases of SDLC?
+English: The 6 major phases of SDLC are:
+
+Requirement Analysis: Gathering user needs and defining goals.
+
+Design: Creating architecture and system blueprints (UML, DB schema).
+
+Implementation (Coding): Writing the actual source code.
+
+Testing: Checking for bugs and verifying requirements.
+
+Deployment: Releasing the software to production servers (e.g., hosting your app).
+
+Maintenance: Bug fixing, updating, and monitoring the system.
+
+
+
+
+
+
+
+2. SDLC Models / വികസന മാതൃകകൾ
+
+❓ What is the difference between the Waterfall model and Agile methodology?
+
+
+Waterfall is a rigid, linear approach. You plan everything upfront, move sequentially from requirement gathering to design, coding, and finally testing, and you don't go backward.
+
+Where to use it: I would choose Waterfall for projects with highly stable, non-negotiable requirements and fixed budgets.
+
+Real-world Scenario: A great example is a core banking system migration or government compliance software. The advantage here is 
+crystal-clear documentation and predictable timelines, but the major disadvantage is that testing happens only at the end, making 
+late-stage changes incredibly expensive. If it wasn't available,
+ highly regulated industries would struggle with compliance and risk management.
+
+
+ Agile: on the other hand, is an iterative and incremental methodology. The project is broken down into small, manageable cycles called 
+ Sprints (usually 1–4 weeks), where planning, development, and testing happen concurrently.
+
+Where to use it: It is perfect for dynamic environments where market needs change rapidly.
+
+Real-world Scenario: I would use Agile for building a product like an E-commerce platform. You can launch a basic functional storefront 
+as an MVP (Minimum Viable Product) quickly, gather real user feedback, and then use upcoming sprints to build out complex features like 
+payment gateways or AI recommendations.
+
+Pros & Cons: The main advantage is faster time-to-market and high flexibility, though the disadvantage is that it demands heavy client 
+involvement and can suffer from scope creep if not managed strictly. Without Agile, modern tech startups wouldn't be able to pivot or 
+push continuous updates based on user demands.
+
+To summarize: I look at Waterfall as building a bridge—you need to plan every detail before you pour the concrete because you can't 
+easily change the foundation later. Agile is like building a web application—you build the core structure first, see how users interact 
+with it, and continuously add rooms and features based on real-world usage."
+
+
+
+
+❓ What is CI/CD in the deployment phase?
+English: CI/CD stands for Continuous Integration and Continuous Deployment. It automates the process of testing code changes and
+ deploying them directly to production environments seamlessly.
+
+
+
+ 3. Scenario-Based Questions / സിറ്റുവേഷൻ ചോദ്യങ്ങൾ
+❓ If a client requests a major feature change in the middle of development, which SDLC model would you recommend and why?
+English: I would recommend the Agile Model. In Agile, requirements do not need to be fixed at the start. Since development happens in 
+short iterations, we can easily adopt and implement new changes in the upcoming sprints without destroying the existing system 
+architecture.
