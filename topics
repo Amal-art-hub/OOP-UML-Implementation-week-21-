@@ -372,3 +372,181 @@ Objects
 Relationships
 UML
 JavaScript Classes
+
+
+
+Round 1: HR + Basics
+Question 1
+
+Tell me about yourself.
+
+(Answer as if you're introducing yourself in an interview.)
+
+Round 2: Programming Paradigms
+Question 2
+
+What is a Programming Paradigm? Can you name the main programming paradigms?
+
+Question 3
+
+What is the difference between Imperative and Declarative programming? Give a JavaScript example.
+
+Question 4
+
+Compare Procedural Programming, Object-Oriented Programming (OOP), and Functional Programming. When would you use each?
+
+Round 3: OOP
+Question 5
+
+What is OOP? Why do we use it?
+
+Question 6
+
+What are the four pillars of OOP? Explain each one with a real-world example and a JavaScript example.
+
+Question 7
+
+What is the difference between Abstraction and Encapsulation? Many beginners confuse these two.
+
+Question 8
+
+Explain the different types of inheritance. Which types are directly supported in JavaScript, and how is multiple inheritance achieved?
+
+Question 9
+
+What is Polymorphism? Explain compile-time and runtime polymorphism. Why doesn't JavaScript support true compile-time polymorphism?
+
+Question 10
+
+What is the difference between Composition and Inheritance? Which one would you prefer in modern JavaScript projects, and why?
+
+Question 11
+
+What are Mixins? How do they help JavaScript simulate multiple inheritance?
+
+Question 12
+
+JavaScript doesn't have interfaces or abstract classes like Java. How can you simulate them?
+
+Question 13
+
+What are Pure Functions? Why are they important in Functional Programming?
+
+Question 14
+
+What is mutable state? Why can mutable shared state become a problem?
+
+Round 4: OOAD
+Question 15
+
+What is OOAD? What is the difference between OOA and OOD?
+
+Question 16
+
+Explain the OOAD workflow from gathering requirements to writing code.
+
+Round 5: UML
+Question 17
+
+What is UML? Why do software engineers use UML before coding?
+
+Question 18
+
+Explain the difference between these UML diagrams:
+
+Class Diagram
+Sequence Diagram
+Use Case Diagram
+Activity Diagram
+State Machine Diagram
+Question 19
+
+If you were designing a Library Management System, which UML diagram would you create first, and why?
+
+Question 20
+
+Design a simple Library Management System.
+
+Include:
+
+Main classes
+Relationships
+One sequence (Borrow Book)
+One activity flow
+Question 21
+
+How would you convert your Class Diagram into JavaScript classes?
+
+Round 6: SDLC
+Question 22
+
+What is SDLC? Why is it important?
+
+Question 23
+
+Explain all the phases of SDLC.
+
+Question 24
+
+What is the difference between Verification and Validation?
+
+Question 25
+
+What is CI/CD? Explain Continuous Integration, Continuous Delivery, and Continuous Deployment.
+
+Question 26
+
+What is the difference between Agile and Scrum?
+
+Question 27
+
+Explain the Scrum lifecycle.
+
+Use these terms naturally:
+
+Sprint
+Sprint Planning
+Daily Scrum
+Sprint Review
+Sprint Retrospective
+Product Backlog
+Sprint Backlog
+Increment
+Question 28
+
+Who is a Product Owner? Who is a Scrum Master? How are their responsibilities different?
+
+Question 29
+
+What are Epic, User Story, Story Point, and Velocity?
+
+Question 30
+
+Explain the following SDLC models. For each one, tell me:
+
+How it works
+Advantages
+Disadvantages
+When to use it
+
+Models:
+
+Waterfall
+V-Model
+Agile
+Spiral
+Incremental
+Prototype
+Final Design Round
+Question 31
+
+Imagine you're developing an E-commerce application.
+
+Walk me through the complete process:
+
+Which SDLC model would you choose?
+How would you gather requirements?
+Which UML diagrams would you create?
+Which OOP concepts would you use?
+How would Scrum help your team?
+How would CI/CD fit into the project?
